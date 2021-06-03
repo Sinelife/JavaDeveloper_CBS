@@ -1,0 +1,4 @@
+1)Написать свое CRUD приложение используя библиотеку JavaFX.
+Гайд для помощи https://code.makery.ch/ru/library/javafx-tutorial/part1
+
+2)Написать свой морской бой используя библиотеку JavaFX.

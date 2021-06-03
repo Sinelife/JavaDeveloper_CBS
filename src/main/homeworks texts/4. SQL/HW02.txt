@@ -1,0 +1,10 @@
+≈сть таблицы users, products, shoppingcarts и вспомогательна€ products_cart.
+
+users(id, userName, firstName, lastName, isEmailVerified);
+
+products(id, name, price, discount);
+
+shoppingcarts(cartId, userId);
+
+Ќаписать запрос, который находит имена людей, айди корзин, количество товара, его название и цена если товар это водка, пиво, хлеб и молоко.
+

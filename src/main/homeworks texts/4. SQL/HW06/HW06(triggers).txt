@@ -1,0 +1,15 @@
+1)Create trigger for updating edit_date when you update text of comment.
+Input tables:
+COMMENT(id, text, create_date, edit_date)
+Create a trigger for updating edit date
+
+
+
+
+2)
+Create a trigger for making comment table edition history:
+Input tables:
+USER(id, username)
+TOPIC(id, tittle)
+COMMENT(id, user_id, tittle, text, topic_id)
+COMMENT_HISTORY (id, comment_id, column, old_value, new_value, edit_by, edit_when)

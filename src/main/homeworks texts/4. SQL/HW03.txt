@@ -1,0 +1,246 @@
+Выполнить запросы по табличкам 
+CREATE TABLE customer(
+  id INTEGER PRIMARY KEY ,
+  name VARCHAR(100),
+  country VARCHAR(100)
+);
+
+
+CREATE TABLE employee1(
+  id INTEGER,
+  first_name VARCHAR(100),
+  last_name VARCHAR(100),
+  age INTEGER,
+  email VARCHAR(100),
+  gender VARCHAR(100),
+  salary INTEGER,
+  customer_id INTEGER,
+  FOREIGN KEY (customer_id) REFERENCES customer
+);
+
+
+insert into customer (id, name, country) values (1, 'Rolex', 'Switzerland');
+insert into customer (id, name, country) values (2, 'Lego', 'Denmark');
+insert into customer (id, name, country) values (3, 'Google', 'USA');
+insert into customer (id, name, country) values (4, 'Canon', 'Japan');
+insert into customer (id, name, country) values (5, 'Bosch', 'Germany');
+insert into customer (id, name, country) values (6, 'Sony', 'Japan');
+insert into customer (id, name, country) values (7, 'Intel', 'USA');
+insert into customer (id, name, country) values (8, 'Rolls-Royce', 'UK');
+insert into customer (id, name, country) values (9, 'Adidas', 'Germany');
+insert into customer (id, name, country) values (10, 'Christian Dior', 'France');
+
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (1, 'Kendal', 'O''Murtagh', 62, 'komurtagh0@walmart.com', 'Male', 18338, 8);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (2, 'Bonny', 'Plessing', 60, 'bplessing1@reddit.com', 'Female', 77194, 5);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (3, 'Jordon', 'Dilgarno', 34, 'jdilgarno2@kickstarter.com', 'Male', 96680, 9);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (4, 'Samantha', 'Alldread', 38, 'salldread3@dailymotion.com', 'Female', 61294, 9);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (5, 'Tillie', 'Weddup', 68, 'tweddup4@blinklist.com', 'Female', 35704, 4);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (6, 'Tyrone', 'Oldfield', 76, 'toldfield5@stumbleupon.com', 'Male', 28021, 9);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (7, 'Bondie', 'Quiney', 42, 'bquiney6@ezinearticles.com', 'Male', 92640, 5);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (8, 'Evvy', 'Peterson', 50, 'epeterson7@sbwire.com', 'Female', 15700, 2);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (9, 'Norris', 'Hurran', 19, 'nhurran8@amazonaws.com', 'Male', 10790, 6);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (10, 'Salim', 'Alker', 60, 'salker9@sciencedirect.com', 'Male', 66950, 8);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (11, 'Cherice', 'Boor', 42, 'cboora@examiner.com', 'Female', 5250, 4);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (12, 'Lavinie', 'Dear', 43, 'ldearb@jugem.jp', 'Female', 21772, 1);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (13, 'Sanders', 'Hampshire', 19, 'shampshirec@imgur.com', 'Male', 14386, 7);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (14, 'Riva', 'Fairebrother', 46, 'rfairebrotherd@1und1.de', 'Female', 93853, 1);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (15, 'Cristian', 'Dredge', 31, 'cdredgee@google.co.jp', 'Male', 47961, 2);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (16, 'Lisette', 'Hinge', 49, 'lhingef@mapy.cz', 'Female', 53020, 6);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (17, 'Kevan', 'Frantzeni', 30, 'kfrantzenig@skype.com', 'Male', 23356, 3);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (18, 'Giffie', 'Wason', 38, 'gwasonh@blogger.com', 'Male', 31833, 6);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (19, 'Yves', 'Lagne', 30, 'ylagnei@bluehost.com', 'Male', 64984, 9);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (20, 'Fabio', 'McKeevers', 66, 'fmckeeversj@photobucket.com', 'Male', 89484, 4);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (21, 'Whit', 'Huller', 50, 'whullerk@twitpic.com', 'Male', 58066, 4);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (22, 'Bridgette', 'Watsham', 80, 'bwatshaml@uiuc.edu', 'Female', 40596, 5);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (23, 'Biron', 'Hurry', 38, 'bhurrym@home.pl', 'Male', 42342, 8);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (24, 'Berny', 'Fintoph', 67, 'bfintophn@disqus.com', 'Female', 28987, 5);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (25, 'Nikaniki', 'Starzaker', 27, 'nstarzakero@comcast.net', 'Female', 61094, 4);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (26, 'Saundra', 'Benfell', 55, 'sbenfellp@mac.com', 'Male', 11354, 3);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (27, 'Carney', 'O''Corren', 30, 'cocorrenq@wiley.com', 'Male', 88079, 2);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (28, 'Petey', 'Caselick', 70, 'pcaselickr@dedecms.com', 'Male', 91860, 8);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (29, 'Carolina', 'Sutterby', 47, 'csutterbys@house.gov', 'Female', 7635, 3);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (30, 'Taddeusz', 'Dalzell', 76, 'tdalzellt@posterous.com', 'Male', 28601, 7);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (31, 'Gwenneth', 'Gregoraci', 34, 'ggregoraciu@mit.edu', 'Female', 5214, 5);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (32, 'Debbi', 'Montague', 57, 'dmontaguev@sitemeter.com', 'Female', 96055, 6);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (33, 'Ab', 'Urion', 26, 'aurionw@tmall.com', 'Male', 31674, 5);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (34, 'Zsazsa', 'Flew', 26, 'zflewx@sourceforge.net', 'Female', 46127, 4);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (35, 'Ayn', 'Applegarth', 52, 'aapplegarthy@tumblr.com', 'Female', 47148, 9);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (36, 'Reagen', 'Pampling', 77, 'rpamplingz@cyberchimps.com', 'Male', 48410, 6);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (37, 'Cleopatra', 'Greyes', 63, 'cgreyes10@nifty.com', 'Female', 58597, 2);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (38, 'Valaria', 'Mabbe', 19, 'vmabbe11@who.int', 'Female', 64959, 7);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (39, 'Vanessa', 'Clorley', 19, 'vclorley12@networkadvertising.org', 'Female', 58751, 10);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (40, 'Benedicta', 'Brooks', 76, 'bbrooks13@goo.ne.jp', 'Female', 7508, 1);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (41, 'Cymbre', 'Nelligan', 39, 'cnelligan14@senate.gov', 'Female', 89920, 10);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (42, 'Vittorio', 'Delicate', 24, 'vdelicate15@behance.net', 'Male', 2494, 8);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (43, 'Roscoe', 'Trower', 44, 'rtrower16@biglobe.ne.jp', 'Male', 25211, 2);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (44, 'Prisca', 'Paley', 35, 'ppaley17@unblog.fr', 'Female', 82522, 3);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (45, 'Jerrilee', 'Bealton', 49, 'jbealton18@ycombinator.com', 'Female', 24163, 4);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (46, 'Chad', 'Tuny', 36, 'ctuny19@51.la', 'Male', 78601, 8);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (47, 'Cloe', 'Giannasi', 66, 'cgiannasi1a@naver.com', 'Female', 31719, 1);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (48, 'Cassius', 'Margaret', 69, 'cmargaret1b@globo.com', 'Male', 84209, 8);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (49, 'Chiquita', 'Wrench', 58, 'cwrench1c@vistaprint.com', 'Female', 97332, 4);
+insert into employee1 (id, first_name, last_name, age, email, gender, salary, customer_id)
+values (50, 'Cord', 'Comiskey', 58, 'ccomiskey1d@yellowbook.com', 'Male', 94092, 1);
+
+
+
+1) Вывести на экран имя, фамилию и зарплату сотрудников, чья зарплата ниже средней зарплаты сотруддников компании 'Google'. Результат вывести отсортированным по убывающей зарплате
+
+2) Вывести на экран имя, фамилию сотрудников компаний из USA чья зарплата больше максимальной зарплаты сотрудника компании BOSCH,
+результат упорядочить по возрастающей зарплате
+
+3) Увеличить зарплату на 25% сотрудницам чья зарплата больше средней зарплаты мужчин и меньше 10000
+
+4) Найти и удалить всех сострудников старше 60 лет используя IN и подзапрос
+
+5) Добавить нового сотрудника в компанию Google со средней зарплатой по компании Google
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Выполнить запросы по данным табличкам
+
+
+create table employee (
+  employee_id   int primary key,
+  name          varchar(20),
+  job           varchar(20),
+  manager_id    int,
+  hiredate      date,
+  salary        int,
+  cpmmissions   int,
+  department_id varchar(20)
+);
+
+create table department (
+  department_id int primary key,
+  name          varchar(20),
+  location      varchar(20)
+);
+
+INSERT INTO department VALUES (10, 'ACCOUNTING', 'NEW YORK');
+INSERT INTO department VALUES (20, 'RESEARCH', 'DALLAS');
+INSERT INTO department VALUES (30, 'SALES', 'CHICAGO');
+INSERT INTO department VALUES (40, 'OPERATIONS', 'BOSTON');
+
+INSERT INTO employee VALUES (7369, 'SMITH', 'CLERK', 7902, TO_DATE('17-12-1980', 'DD-MM-YYYY'), 800, NULL, 20);
+INSERT INTO employee VALUES (7499, 'ALLEN', 'SALESMAN', 7698, TO_DATE('20-02-1981', 'DD-MM-YYYY'), 1600, 300, 30);
+INSERT INTO employee VALUES (7521, 'WARD', 'SALESMAN', 7698, TO_DATE('22-02-1981', 'DD-MM-YYYY'), 1250, 500, 30);
+INSERT INTO employee VALUES (7566, 'JONES', 'MANAGER', 7839, TO_DATE('2-04-1981', 'DD-MM-YYYY'), 2975, NULL, 20);
+INSERT INTO employee VALUES (7654, 'MARTIN', 'SALESMAN', 7698, TO_DATE('28-09-1981', 'DD-MM-YYYY'), 1250, 1400, 30);
+INSERT INTO employee VALUES (7698, 'BLAKE', 'MANAGER', 7839, TO_DATE('1-05-1981', 'DD-MM-YYYY'), 2850, NULL, 30);
+INSERT INTO employee VALUES (7782, 'CLARK', 'MANAGER', 7839, TO_DATE('9-06-1981', 'DD-MM-YYYY'), 2450, NULL, 10);
+INSERT INTO employee VALUES (7788, 'SCOTT', 'ANALYST', 7566, TO_DATE('09-12-1982', 'DD-MM-YYYY'), 3000, NULL, 20);
+INSERT INTO employee VALUES (7839, 'KING', 'PRESIDENT', NULL, TO_DATE('17-11-1981', 'DD-MM-YYYY'), 5000, NULL, 10);
+INSERT INTO employee VALUES (7844, 'TURNER', 'SALESMAN', 7698, TO_DATE('8-09-1981', 'DD-MM-YYYY'), 1500, 0, 30);
+INSERT INTO employee VALUES (7876, 'ADAMS', 'CLERK', 7788, TO_DATE('12-01-1983', 'DD-MM-YYYY'), 1100, NULL, 20);
+INSERT INTO employee VALUES (7900, 'JAMES', 'CLERK', 7698, TO_DATE('3-12-1981', 'DD-MM-YYYY'), 950, NULL, 30);
+INSERT INTO employee VALUES (7902, 'FORD', 'ANALYST', 7566, TO_DATE('3-12-1981', 'DD-MM-YYYY'), 3000, NULL, 20);
+INSERT INTO employee VALUES (7934, 'MILLER', 'CLERK', 7782, TO_DATE('23-01-1982', 'DD-MM-YYYY'), 1300, NULL, 10);
+
+ALTER TABLE employee
+  ADD CONSTRAINT employee FOREIGN KEY (manager_id) REFERENCES employee (employee_id);
+
+1. Create a query to display the name and salary of employees earning more than $2850.
+
+2. Create a query to display the employee name and department number for employee number 7566.
+
+3. Create a query to display the name and salary for all employees whose salary is not in the
+range of $1500 and $2850.
+
+4. Display the employee name, job and start date of employees hired between February 20, 1981, and May 1, 1981.  Order the query in ascending order of start date.
+
+5. Display the employee name and department number of all employees in departments 10 and 30 in alphabetical order by name.
+
+6. Display list the name and salary of employees who earn more than $1500 and are in department 10 or 30.
+Label the columns Employee and Monthly Salary, respectively.
+
+7. Display the name and hire date of every employee who was hired in 1982.
+
+8. Display the name and job title of employees who do not have a manager.
+
+9. Display the name, salary, and commission for all employees who earn commissions.
+Sort the data in descending order of salary and commissions (commission within salary).
+
+10. Display the names of all employees where the third letter of their name is an A.
+
+11. Display the name of all employees that have two Ls in their name and are in department 30 or their manager is 7782.
+
+12. Display the name, job, and salary for all employees whose job is Clerk or Analyst
+and their salary is not equal to $1000, $3000, or $5000.
+
+13. Display the name, salary, and commission for all employees whose commission amount
+is greater than their salary  increased by 10%.
+
+
+
+
+
+
+
+

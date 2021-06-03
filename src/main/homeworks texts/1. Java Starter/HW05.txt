@@ -1,0 +1,21 @@
+–еализовать методы класса String:
+- subString (от и до)
+- subString (от)
+- subString (до)
+- trim
+- trim (обрезать и внутринние) "   Hello   world   " -> "Hello world"
+- indexOf
+- indexOf (от)
+- lastIndexOf
+- contains
+- contains (от)
+- toString(int[] arr) new int[]{1, 3, 4, 5} -> "[1, 3, 4, 5]"
+- replaceAll
+
+Ќайти наибольшую подстроку из двух строк
+"hello world"
+"worship hell"
+
+->
+
+"hell"

@@ -1,0 +1,39 @@
+Hero
+- name
+- health
+- attack
+- armor
+
+Dwarf
+- blockChance
+- blockPercent
+Special ability of dwarfs is attack blocking
+
+Human
+- healingChance
+- healthPercent
+Special ability of humans is health restore
+
+Elf
+- criticalAttackChance
+- criticalAttackMultiplier
+Special ability of elfs is increased attack
+
+Ork
+- dodgeAttackChance
+Special ability of orks is possibility to dodge attack
+
+Game process scenario
+- game program starts
+
+- player choose number of heroes for each team, his and pc (should be equal)
+
+- player choose types of heroes(races) for his team depends on count in step before.
+ For example, if total count of heroes in teams is 4, player can choose 2 orks, 1 human and 1 elf or 2 dwarfs and 2 elfs etc.
+ The computer's team is determined randomly.
+
+- fight starts and each team attack another randomly by heroes, each step should be logged, for example
+Player Dwarf 'Astan'[340hp] attacked PC Elf 'Eliot'[321hp], damage caused is 121 hp
+PC Dwarf 'Astan'[340hp] attacked Player Ork 'Gladior'[421hp], 'Gladior' dodged the attack
+
+- game ends if all heroes of player or pc are died

@@ -1,0 +1,18 @@
+
+1) —оздать таблицу contact
+
+2) ”далить таблицу contact
+
+3) ѕересоздать таблицу contact с атрибутами first_name(VARCHAR, NON_NULL), last_name(TEXT), birthday(DATE), phone(INT), city(VARCHAR),country(VARCHAR)
+
+4) »зменить тип атрибута last_name с TEXT на VARCHAR
+
+5) ƒобавить ограничение NON_NULL в атрибут last_name
+
+6) «аполнить таблицу contact 20 запис€ми(женские имена должны заканчиватьс€ на букву 'а') 
+
+7) ƒобавить в таблицу contact атрибут gender(VARCHAR)
+
+8) »зменить таблицу contact, заполнив атрибут gender значени€ми male/female по условию - если first_name заканчиваетс€ на букву 'а' - female, все другие - male
+
+9) ƒобавить атрибут rating (INT) с ограничением на только положительные значени€
