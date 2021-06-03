@@ -1,0 +1,100 @@
+
+/*1. Create a query to display the name and salary of employees earning more than $2850.*/
+SELECT name, salary
+FROM employee
+WHERE salary > 2850;
+
+
+
+
+/*2. Create a query to display the employee name and department number for employee number 7566.*/
+SELECT name, department_id
+FROM employee
+WHERE employee_id = 7566;
+
+
+
+/*3. Create a query to display the name and salary for all employees whose salary is not in the
+range of $1500 and $2850.*/
+SELECT name, salary
+FROM employee
+WHERE salary > 2850 OR 1500 > salary;
+
+
+
+/*4. Display the employee name, job and start date of employees hired between February 20, 1981, and May 1, 1981.  Order the query in ascending order of start date.*/
+SELECT name, job, hiredate
+FROM employee
+WHERE hiredate <= '1981-05-01' AND hiredate >= '1981-02-20'
+ORDER BY hiredate ASC;
+
+
+
+/*5. Display the employee name and department number of all employees in departments 10 and 30 in alphabetical order by name.*/
+SELECT name, department_id
+FROM employee
+WHERE department_id IN ('10','30')
+ORDER BY name ASC;
+
+
+
+/*6. Display list the name and salary of employees who earn more than $1500 and are in department 10 or 30.
+Label the columns Employee and Monthly Salary, respectively.*/
+SELECT name AS Employee, salary AS Monthly_Salary
+FROM employee
+WHERE salary > 1500 AND department_id IN ('10','30');
+
+
+
+
+/*7. Display the name and hire date of every employee who was hired in 1982.*/
+SELECT name, hiredate
+FROM employee
+WHERE to_char(hiredate, 'YYYY') = '1982';
+
+
+
+/*8. Display the name and job title of employees who do not have a manager.*/
+SELECT name, job
+FROM employee
+WHERE manager_id IS NULL;
+
+
+
+
+/*9. Display the name, salary, and commission for all employees who earn commissions.
+Sort the data in descending order of salary and commissions (commission within salary).*/
+SELECT name, salary, cpmmissions
+FROM employee
+WHERE cpmmissions IS NOT NULL
+ORDER BY salary DESC , cpmmissions DESC;
+
+
+
+/*10. Display the names of all employees where the third letter of their name is an A.*/
+SELECT name
+FROM employee
+WHERE name LIKE '__A%';
+
+
+
+/*11. Display the name of all employees that have two Ls in their name and are in department 30 or their manager is 7782.*/
+SELECT name
+FROM employee
+WHERE name LIKE '%L%L%' AND (department_id = '30' OR manager_id = 7782);
+
+
+
+/*12. Display the name, job, and salary for all employees whose job is Clerk or Analyst
+and their salary is not equal to $1000, $3000, or $5000.*/
+SELECT name, job, salary
+FROM employee
+WHERE job IN ('CLERK', 'ANALYST') AND salary NOT IN (1000, 3000, 5000);
+
+
+
+/*13. Display the name, salary, and commission for all employees whose commission amount
+is greater than their salary  increased by 10%.*/
+SELECT name, salary, cpmmissions
+FROM employee
+WHERE cpmmissions > salary * 1.1;

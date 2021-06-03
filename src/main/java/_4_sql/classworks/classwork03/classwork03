@@ -1,0 +1,86 @@
+
+
+
+
+/*1) Вывести на экран имя, фамилию и зарплату сотрудников, чья зарплата ниже средней зарплаты сотруддников компании 'Google'. Результат вывести отсортированным по убывающей зарплате*/
+SELECT employee.first_name, employee.last_name, employee.salary
+FROM employee
+WHERE salary < (SELECT AVG(salary)
+                FROM employee
+                       LEFT JOIN customer
+                    c2 on employee.customer_id = c2.id
+                WHERE c2.name = 'Google')ORDER BY salary DESC;
+
+
+INSERT INTO characters(firstName, race, specialization, power) VALUES ('Элрис','эльф','лучник',400);
+INSERT INTO characters(firstName, race, specialization, power) VALUES ('Кахат','демон','воитель',420);
+
+
+
+
+
+/*2) Вывести на экран имя, фамилию сотрудников компаний из USA чья зарплата больше максимальной зарплаты сотрудника компании BOSCH,
+результат упорядочить по возрастающей зарплате*/
+
+SELECT employee.first_name, employee.last_name
+FROM employee
+       LEFT JOIN customer c3 on employee.customer_id = c3.id
+WHERE c3.country = 'USA' AND salary > (SELECT max(salary)
+                                       FROM employee
+                                              LEFT JOIN customer c2 on employee.customer_id = c2.id
+                                       WHERE c2.name = 'BOSCH')ORDER BY salary ASC;
+
+
+
+
+/*3) Увеличить зарплату на 25% сотрудницам чья зарплата больше средней зарплаты мужчин и меньше 10000*/
+UPDATE employee
+SET salary = salary * 1.25
+WHERE gender = 'Female' AND salary < 100000 AND salary > (SELECT avg(salary)
+                                                          FROM employee
+                                                          WHERE gender = 'Male');
+
+/*Найти сотрудниц чья зарплата больше средней зарплаты мужчин и меньше 10000*/
+SELECT *
+FROM employee
+WHERE gender = 'Female' AND salary < 100000 AND salary > (SELECT avg(salary)
+                                                          FROM employee
+                                                          WHERE gender = 'Male');
+
+
+
+/*4) Найти и удалить всех сострудников старше 60 лет используя IN и подзапрос*/
+DELETE
+from employee
+WHERE age IN (SELECT age
+              FROM employee
+              WHERE age > 60);
+
+
+
+
+/*5) Добавить нового сотрудника в компанию Google со средней зарплатой по компании Google*/
+
+INSERT INTO employee(id, first_name, last_name, age, email, gender, salary, customer_id)
+VALUES(1000,'Андрей', 'Петров', 30, 'a.petrov@gmail.com', 'Male',
+       (SELECT round(avg(salary))
+        FROM employee
+               INNER JOIN customer c2 on employee.customer_id = c2.id
+        WHERE c2.name = 'Google'),
+       (SELECT id
+        FROM customer
+        WHERE name = 'Google'));
+
+
+/*Запрос на нахлждение средней зарплаты работников комании Google*/
+SELECT round(avg(salary))
+FROM employee
+       INNER JOIN customer c2 on employee.customer_id = c2.id
+WHERE c2.name = 'Google';
+
+
+/**Запрос на на нахождение id компании Google*/
+SELECT id
+FROM customer
+WHERE name = 'Google';
+
